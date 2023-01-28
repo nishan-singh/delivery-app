@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Delivery App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Economica:wght@700&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Merriweather&family=Montserrat:wght@100;400;900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body onload="showDishes()">
+    <div class="main-wrapper">
+      <section class="food-item-container">
+        <div class="poster-title-container">
+          <div class="poster-container">
+            <img src="./img/poster.jpg" alt="" />
+          </div>
+          <section class="restaurant-name-container">
+            <div class="title-wrapper">
+              <div class="restaurant-name">
+                <div>ABC Restaurant</div>
+              </div>
+              <div class="icons-wrapper">
+                <div>
+                  <span>
+                    <img src="./img/icons/info.png" alt="" />
+                  </span>
+                </div>
+                <div>
+                  <span>
+                    <img src="./img/icons/heart.png" alt="" />
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="infos-wrapper">
+              <div>
+                <div class="image-wrapper">
+                  <img src="./img/icons/clock.png" alt="" />
+                </div>
+                <span>Ab 17.30</span>
+              </div>
+              <div>
+                <div class="image-wrapper">
+                  <img src="./img/icons/bicycle.png" alt="" />
+                </div>
+                <span class="free-delivery">kostenlos</span>
+              </div>
+              <div>
+                <div class="image-wrapper">
+                  <img src="./img/icons/shopping-bag.png" alt="" />
+                </div>
+                <span>Min. 15.00 €</span>
+              </div>
+            </div>
+          </section>
+        </div>
+        <section class="food-items-wrapper">
+          <div class="our-menu">
+            <h2>Unser Menü</h2>
+          </div>
+          <div class="each-item-wrapper" id="each-item-wrapper"></div>
+        </section>
+      </section>
+      <div class="mobile-pay-button" id="mobile-button">
+        <button onclick="showMobileBasket(i)">Warenkorb</button>
+      </div>
+      <aside class="basket-container" id="basket-container">
+        <div class="basket-inner-container">
+          <div class="basket-info">
+            <div class="close-btn" onclick="hideAddedItems()">
+              <img src="./img/icons/close.png" alt="">
+            </div>
+            <h2>Warenkorb</h2>
+          </div>
+          <div class="basket-items-wrapper" id="empty-basket">
+            <div class="basket-items">
+              <img src="./img/icons/shopping-bag.png" alt="" />
+            </div>
+            <div class="empty-basket-wrapper">
+              <div>
+                <h2>Fülle deinen Warenkorb</h2>
+              </div>
+              <div class="description">
+                Füge einige leckere Gerichte aus der <br />
+                Speisekarte hinzu und bestelle dein Essen.
+              </div>
+            </div>
+          </div>
+          <div class="items-main-wrapper" id="items-main-wrapper">
+          </div>
+        </div>
+        <div id="bill-n-pay-btn-wrapper">
+          <div class="products-bill-wrapper">
+            <div>
+              <div class="item-price">Zwischensumme</div>
+              <div id="sub-total">14,00 €</div>
+            </div>
+            <div class="delivery-cost">
+              <div>Lieferkosten</div>
+              <div>0,00 €</div>
+            </div>
+            <div class="total-cost">
+              <div>Gesamt</div>
+              <div id="total-cost">14,00 €</div>
+            </div>
+          </div>
+          <div class="pay-button">
+            <button>Bezahlen</button>
+          </div>
+        </div>
+      </aside>
+    </div>
+    <div style="color: black">
+      Icons made by
+      <a href="https://www.flaticon.com/authors/th-studio" title="the studio">
+        th studio
+      </a>
+      from
+      <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+    </div>
+    <script src="templates.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
